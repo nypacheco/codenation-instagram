@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
+import { getStories } from '../../data/stories';
+import { getFeed } from '../../data/feed';
+
 import './styles.css';
 
 import Header from '../Header';
 import Stories from '../Stories';
 import Feed from '../Feed';
-
-import { getStories } from '../../data/stories';
-import { getFeed } from '../../data/feed';
 
 class App extends Component {
   constructor() {
@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {isLoading
+        { isLoading
           ? <span>Loading ...</span>
           : (
             <>
@@ -45,7 +45,6 @@ class App extends Component {
               <Feed feed={feed} />
             </>
           )}
-
       </div>
     );
   }
