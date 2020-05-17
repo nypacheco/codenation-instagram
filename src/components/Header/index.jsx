@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-import logo from '../../assets/images/instagram-logo.svg';
-
 import './styles.css';
+
+import logo from '../../assets/images/instagram-logo.svg';
 
 class Header extends Component {
   render() {

@@ -35,7 +35,11 @@ class Stories extends Component {
               <a
                 key={story.id}
                 href="#"
-                className={classnames('user__thumb', { 'user__thumb--hasNew': story.hasNew })}
+                className={classnames(
+                  'user__thumb', {
+                    'user__thumb--hasNew': story.hasNew,
+                  },
+                )}
               >
                 <span className="user__thumb__wrapper">
                   <img src={story.image} alt={story.alt} />

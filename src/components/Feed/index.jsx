@@ -12,8 +12,8 @@ import {
 
 import './styles.css';
 
-const red = 'red';
-const black = 'black';
+const RED = 'red';
+const BLACK = 'black';
 
 class Feed extends Component {
   constructor(props) {
@@ -48,17 +48,17 @@ class Feed extends Component {
   }
 
   render() {
-    const { liked, saved } = this.state;
     const { feed } = this.props;
+    const { liked, saved } = this.state;
 
     const heartProps = {
       icon: liked ? faHeart : farHeart,
-      color: liked ? red : null,
+      color: liked ? RED : null,
     };
 
     const bookmarkProps = {
       icon: saved ? faBookmark : farBookmark,
-      color: saved ? black : null,
+      color: saved ? BLACK : null,
     };
 
     return (
@@ -148,6 +148,7 @@ Feed.propTypes = {
 
 // PropTypes.func
 // PropTypes.bool
-// PropTypes.node ..
+// PropTypes.node
+// PropTypes.element ..
 
 export default Feed;
