@@ -1,0 +1,28 @@
+.topbar {
+	backface-visibility: hidden;
+	background-color: white;
+	left: 0;
+	padding: 8px 16px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+.topbar .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.topbar__logo {
+	display: inline-block;
+	height: 40px;
+}
+
+.topbar__logo img {
+	height: 100%;
+}
+
+.topbar__icon {
+	font-size: 1.6rem;
+}
