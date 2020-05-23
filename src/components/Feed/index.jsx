@@ -126,20 +126,22 @@ class Feed extends Component {
 }
 
 Feed.propTypes = {
-  feed: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    profile: PropTypes.string,
-    name: PropTypes.string,
-    photo: PropTypes.string,
-    alt: PropTypes.string,
-    likes: PropTypes.shape({
-      first: {
-        profile: PropTypes.string,
-        name: PropTypes.string,
-      },
-      others: PropTypes.number,
+  feed: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      profile: PropTypes.string,
+      name: PropTypes.string,
+      photo: PropTypes.string,
+      alt: PropTypes.string,
+      likes: PropTypes.shape({
+        first: PropTypes.shape({
+          profile: PropTypes.string,
+          name: PropTypes.string,
+        }),
+        others: PropTypes.number,
+      }),
     }),
-  })).isRequired,
+  ).isRequired,
 };
 
 // Feed.defaultProps = {

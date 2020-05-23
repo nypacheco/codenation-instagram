@@ -27,6 +27,10 @@ class Stories extends Component {
   render() {
     const { stories } = this.props;
 
+    // if (stories) {
+    //   throw new Error('ih, deu erro!');
+    // }
+
     return (
       <div className="container">
         <section className="stories">
@@ -40,8 +44,9 @@ class Stories extends Component {
                     'user__thumb--hasNew': story.hasNew,
                   },
                 )}
+                data-testid={`user-thumb-${story.id}`}
               >
-                <span className="user__thumb__wrapper">
+                <span className="user__thumb__wrapper" data-testid="user-thumb">
                   <img src={story.image} alt={story.alt} />
                 </span>
               </a>
@@ -59,7 +64,11 @@ Stories.propTypes = {
     id: PropTypes.number,
     image: PropTypes.string,
     alt: PropTypes.string,
-  })).isRequired,
+  })),
+};
+
+Stories.defaultProps = {
+  stories: [],
 };
 
 export default Stories;
