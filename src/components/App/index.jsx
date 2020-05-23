@@ -8,6 +8,9 @@ import './styles.css';
 import Header from '../Header';
 import Stories from '../Stories';
 import Feed from '../Feed';
+import ErrorBoundary from '../ErrorBoundary';
+import ControlledForm from '../ControlledForm';
+import UncontrolledForm from '../UncontrolledForm';
 
 class App extends Component {
   constructor() {
@@ -37,12 +40,16 @@ class App extends Component {
     return (
       <div>
         <Header />
+        {/* <UncontrolledForm /> */}
+        {/* <ControlledForm /> */}
         { isLoading
           ? <span>Loading ...</span>
           : (
             <>
-              <Stories stories={stories} />
-              <Feed feed={feed} />
+              <ErrorBoundary>
+                <Stories stories={stories} />
+                <Feed feed={feed} />
+              </ErrorBoundary>
             </>
           )}
       </div>
