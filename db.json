@@ -2,56 +2,43 @@
   "stories": [
     {
       "id": 1,
-      "image": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/yoda/yoda-profile.jpg?raw=true",
+      "image": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/yoda/yoda-profile.jpg",
       "alt": "yoda-profile"
     },
     {
       "id": 2,
-      "image": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/gamora/gamora-profile.jpg?raw=true",
-      "alt": "gamora-profile",
+      "image": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-profile.jpg",
+      "alt": "bruce-profile",
       "hasNew": true
     },
     {
       "id": 3,
-      "image": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/black-panther/black-panther-profile.jpg?raw=true",
+      "image": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg",
       "alt": "black-panther-profile"
     }
   ],
   "posts": [
     {
       "id": 1,
-      "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/yoda/yoda-profile.jpg?raw=true",
+      "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/yoda/yoda-profile.jpg",
       "name": "Mestre Yoda",
-      "photo": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/yoda/yoda-1.jpg?raw=true",
+      "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/yoda/yoda-1.jpg",
       "likes": {
         "first": {
-          "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/domino/domino-profile.jpg?raw=true",
+          "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/domino/domino-profile.jpg",
           "name": "Domino"
         },
         "others": 7
       }
     },
     {
-      "id": 2,
-      "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/gamora/gamora-profile.jpg?raw=true",
-      "name": "Gamora Zen",
-      "photo": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/gamora/gamora-1.jpg?raw=true",
-      "likes": {
-        "first": {
-          "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/carol/carol-profile.jpg?raw=true",
-          "name": "Carol Danvers"
-        },
-        "others": 7
-      }
-    },
-    {
       "id": 3,
-      "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/black-panther/black-panther-profile.jpg?raw=true",
+      "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg",
       "name": "T\"Challa",
-      "photo": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/black-panther/black-panther-1.jpg?raw=true",
+      "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-3.jpg",
       "likes": {
         "first": {
-          "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/bruce/bruce-profile.jpg?raw=true",
+          "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-profile.jpg",
           "name": "Bruce Wayne"
         },
         "others": 7
@@ -59,12 +46,12 @@
     },
     {
       "id": 4,
-      "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/carol/carol-profile.jpg?raw=true",
+      "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/carol/carol-profile.jpg",
       "name": "Carol Danvers",
-      "photo": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/carol/carol-1.jpg?raw=true",
+      "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/carol/carol-1.jpg",
       "likes": {
         "first": {
-          "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/yoda/yoda-profile.jpg?raw=true",
+          "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/yoda/yoda-profile.jpg",
           "name": "Mestre Yoda"
         },
         "others": 7
@@ -72,25 +59,25 @@
     },
     {
       "id": 5,
-      "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/bruce/bruce-profile.jpg?raw=true",
+      "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-profile.jpg",
       "name": "Bruce Wayne",
-      "photo": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/bruce/bruce-1.jpg?raw=true",
+      "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-1.jpg",
       "likes": {
         "first": {
-          "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/gamora/gamora-profile.jpg?raw=true",
-          "name": "Gamora Zen"
+          "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/domino/domino-profile.jpg",
+          "name": "Domino"
         },
         "others": 2
       }
     },
     {
       "id": 6,
-      "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/domino/domino-profile.jpg?raw=true",
+      "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/domino/domino-profile.jpg",
       "name": "Domino",
-      "photo": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/domino/domino-1.jpg?raw=true",
+      "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/domino/domino-1.jpg",
       "likes": {
         "first": {
-          "profile": "https://github.com/thecodenation/challenges/blob/master/react-12/solution_files/public/img/profiles/black-panther/black-panther-profile.jpg?raw=true",
+          "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg",
           "name": "T\"Challa"
         },
         "others": 3
