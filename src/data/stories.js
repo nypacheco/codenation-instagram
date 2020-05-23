@@ -1,28 +1,32 @@
-import yodaProfile from '../assets/images/yoda-profile.jpg';
-import gamoraProfile from '../assets/images/gamora-profile.jpg';
-import blackPantherProfile from '../assets/images/black-panther-profile.jpg';
+// import yodaProfile from '../assets/images/yoda-profile.jpg';
+// import gamoraProfile from '../assets/images/gamora-profile.jpg';
+// import blackPantherProfile from '../assets/images/black-panther-profile.jpg';
 
-const stories = [
-  {
-    id: 1,
-    image: yodaProfile,
-    alt: 'yodaProfile',
-  },
-  {
-    id: 2,
-    image: gamoraProfile,
-    alt: 'gamoraProfile',
-    hasNew: true,
-  },
-  {
-    id: 3,
-    image: blackPantherProfile,
-    alt: 'blackPantherProfile',
-  },
-];
+// const stories = [
+//   {
+//     id: 1,
+//     image: yodaProfile,
+//     alt: 'yodaProfile',
+//   },
+//   {
+//     id: 2,
+//     image: gamoraProfile,
+//     alt: 'gamoraProfile',
+//     hasNew: true,
+//   },
+//   {
+//     id: 3,
+//     image: blackPantherProfile,
+//     alt: 'blackPantherProfile',
+//   },
+// ];
 
-export const getStories = () => new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(stories);
-  }, 2000);
-});
+// export const getStories = () => new Promise((resolve) => {
+//   setTimeout(() => {
+//     resolve(stories);
+//   }, 2000);
+// });
+
+export const getStories = () => fetch('http://localhost:3001/stories')
+  .then((response) => response.json())
+  .then((data) => data);
