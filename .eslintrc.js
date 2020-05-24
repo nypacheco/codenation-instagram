@@ -29,6 +29,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/img-redundant-alt': 'off',
     'max-len': ['error', {
       code: 90,
       ignoreComments: true,

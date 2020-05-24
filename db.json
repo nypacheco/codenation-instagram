@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 2,
       "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg",
       "name": "T\"Challa",
       "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-3.jpg",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 3,
       "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/carol/carol-profile.jpg",
       "name": "Carol Danvers",
       "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/carol/carol-1.jpg",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 4,
       "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-profile.jpg",
       "name": "Bruce Wayne",
       "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-1.jpg",
@@ -71,7 +71,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 5,
       "profile": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/domino/domino-profile.jpg",
       "name": "Domino",
       "photo": "https://viniciusvinna.netlify.app/assets//api-instagram/profiles/domino/domino-1.jpg",
