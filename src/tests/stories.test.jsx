@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -23,7 +24,7 @@ describe('Stories', () => {
     const { getByAltText } = render(<Stories stories={stories} />);
 
     expect(getByAltText(story.alt)).toBeInTheDocument();
-    expect(getByAltText(story.alt)).toHaveAttribute('src', story.image);
+    expect(getByAltText(story.alt).src).toEqual(story.image);
   });
 
   it('should render the same amount of stories', () => {
@@ -32,16 +33,18 @@ describe('Stories', () => {
     expect(queryAllByTestId('user-thumb')).toHaveLength(stories.length);
   });
 
-  it('should not have "user__thumb--hasNew" className when story hasNew prop as false', () => {
+  it('should not have "user__thumb--hasNew" when story hasNew prop is false', () => {
     const { getByTestId } = render(<Stories stories={stories} />);
 
     expect(getByTestId(`user-thumb-${story.id}`)).not.toHaveClass('user__thumb--hasNew');
   });
 
-  it('should have "user__thumb--hasNew" className when story hasNew prop as true', () => {
+  it('should have "user__thumb--hasNew" className when story hasNew prop is true', () => {
     const { getByTestId } = render(<Stories stories={stories} />);
 
-    expect(getByTestId(`user-thumb-${storyWithHasNew.id}`)).toHaveClass('user__thumb--hasNew');
+    expect(
+      getByTestId(`user-thumb-${storyWithHasNew.id}`),
+    ).toHaveClass('user__thumb--hasNew');
   });
 
   it('should not render "user-thumb" when stories prop is empty', () => {
