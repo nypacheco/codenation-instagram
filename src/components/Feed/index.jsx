@@ -8,8 +8,6 @@ import {
   faBookmark as farBookmark,
 } from '@fortawesome/free-regular-svg-icons';
 
-// import { getFeed } from '../../data/feed';
-
 import './styles.css';
 
 const RED = 'red';
@@ -22,22 +20,11 @@ class Feed extends Component {
     this.state = {
       liked: false,
       saved: true,
-      // feed: [],
-      // isLoading: true,
     };
 
     this.handleHeartClick = this.handleHeartClick.bind(this);
     this.handleBookmarkClick = this.handleBookmarkClick.bind(this);
   }
-
-  // componentDidMount() {
-  //   getFeed().then((result) => {
-  //     this.setState({
-  //       feed: result,
-  //       isLoading: false,
-  //     });
-  //   });
-  // }
 
   handleHeartClick() {
     this.setState((state) => ({ liked: !state.liked }));
@@ -65,11 +52,11 @@ class Feed extends Component {
       <div className="container">
         <section className="feed">
           {feed.map((post) => (
-            <article key={post.id} className="post">
+            <article key={post.id} className="post" data-testid="post">
               <header className="post__header">
                 <div className="user">
                   <a href="#" className="user__thumb">
-                    <img src={post.profile} alt={post.alt} />
+                    <img src={post.profile} alt={`${post.slug}-profile`} />
                   </a>
 
                   <a href="#" className="user__name">{post.name}</a>
@@ -81,7 +68,7 @@ class Feed extends Component {
               </header>
 
               <figure className="post__figure">
-                <img src={post.photo} alt="" />
+                <img src={post.photo} alt={`${post.slug}-photo`} />
               </figure>
 
               <nav className="post__controls">
@@ -109,7 +96,7 @@ class Feed extends Component {
               <div className="post__status">
                 <div className="user">
                   <a href="#" className="user__thumb">
-                    <img src={post.likes.first.profile} alt="" />
+                    <img src={post.likes.first.profile} alt={`${post.likes.first.slug}-profile`} />
                   </a>
 
                   <span>
@@ -141,16 +128,11 @@ Feed.propTypes = {
         others: PropTypes.number,
       }),
     }),
-  ).isRequired,
+  ),
 };
 
-// Feed.defaultProps = {
-//   feed: [],
-// };
-
-// PropTypes.func
-// PropTypes.bool
-// PropTypes.node
-// PropTypes.element ..
+Feed.defaultProps = {
+  feed: [],
+};
 
 export default Feed;

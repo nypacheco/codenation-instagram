@@ -6,30 +6,8 @@ import classnames from 'classnames';
 import './styles.css';
 
 class Stories extends Component {
-  // constructor() {
-  //   super();
-
-  //   this.state = {
-  //     isLoading: true,
-  //     stories: [],
-  //   };
-  // }
-
-  // componentDidMount() {
-  //   getStories().then((result) => {
-  //     this.setState({
-  //       stories: result,
-  //       isLoading: false,
-  //     });
-  //   });
-  // }
-
   render() {
     const { stories } = this.props;
-
-    // if (stories) {
-    //   throw new Error('ih, deu erro!');
-    // }
 
     return (
       <div className="container">
