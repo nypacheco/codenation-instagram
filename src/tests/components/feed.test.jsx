@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Feed from '../components/Feed';
+import Feed from '../../components/Feed';
 
 const post = {
   id: 1,

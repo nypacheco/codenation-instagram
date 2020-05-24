@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Stories from '../components/Stories';
+import Stories from '../../components/Stories';
 
 const story = {
   id: 1,

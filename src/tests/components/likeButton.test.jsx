@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import LikeButton from '../components/Feed/LikeButton';
+import LikeButton from '../../components/Feed/LikeButton';
 
 describe('LikeButton', () => {
   it('should change icon when it is clicked', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import SaveButton from '../components/Feed/SaveButton';
+import SaveButton from '../../components/Feed/SaveButton';
 
 describe('SaveButton', () => {
   it('should change icon when it is clicked', () => {

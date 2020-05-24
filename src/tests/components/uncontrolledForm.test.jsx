@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import { ControlledForm } from '../components/Form';
+import { UncontrolledForm } from '../../components/Form';
 
 jest.spyOn(window, 'alert').mockImplementation(() => { });
 
-describe('ControlledForm', () => {
+describe('UncontrolledForm', () => {
   const value = 'Yuki';
 
   it('should update input value when onchange is called', () => {
-    const { getByLabelText, getByDisplayValue } = render(<ControlledForm />);
+    const { getByLabelText, getByDisplayValue } = render(<UncontrolledForm />);
 
     const input = getByLabelText(/nome/i);
     fireEvent.change(input, { target: { value } });
@@ -18,13 +18,13 @@ describe('ControlledForm', () => {
   });
 
   it('should call alert when submit button is clicked', () => {
-    const { getByText, getByLabelText } = render(<ControlledForm />);
+    const { getByText, getByLabelText } = render(<UncontrolledForm />);
 
     const input = getByLabelText(/nome/i);
     fireEvent.change(input, { target: { value } });
     fireEvent.click(getByText('Submit'));
 
     expect(window.alert)
-      .toHaveBeenCalledWith(`Componentes controlados: { name: ${value} }`);
+      .toHaveBeenCalledWith(`Componentes não controlados: { name: ${value} }`);
   });
 });

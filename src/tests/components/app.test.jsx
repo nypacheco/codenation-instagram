@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import App from '../components/App';
+import App from '../../components/App';
 
 const mockStory = {
   id: 1,
@@ -24,8 +24,8 @@ const mockFeed = {
   },
 };
 
-jest.mock('../utils/stories', () => ({ getStories: jest.fn(() => [mockStory]) }));
-jest.mock('../utils/feed', () => ({ getFeed: jest.fn(() => [mockFeed]) }));
+jest.mock('../../utils/stories', () => ({ getStories: jest.fn(() => [mockStory]) }));
+jest.mock('../../utils/feed', () => ({ getFeed: jest.fn(() => [mockFeed]) }));
 
 describe('App', () => {
   it('should find loading text when component is rendered', () => {
