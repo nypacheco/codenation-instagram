@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
-import { getStories } from '../../data/stories';
-import { getFeed } from '../../data/feed';
+import { getStories } from '../../utils/stories';
+import { getFeed } from '../../utils/feed';
 
 import './styles.css';
 
 import Header from '../Header';
+import ErrorBoundary from '../ErrorBoundary';
 import Stories from '../Stories';
 import Feed from '../Feed';
-import ErrorBoundary from '../ErrorBoundary';
-import ControlledForm from '../ControlledForm';
-import UncontrolledForm from '../UncontrolledForm';
+// import { ControlledForm, UncontrolledForm } from '../Form';
 
 class App extends Component {
   constructor() {
@@ -38,25 +37,23 @@ class App extends Component {
     const { stories, feed, isLoading } = this.state;
 
     return (
-      <div>
+      <>
         <Header />
-        {/* <UncontrolledForm /> */}
-        {/* <ControlledForm /> */}
+        {/* <UncontrolledForm />
+        <ControlledForm /> */}
         { isLoading
           ? <span>Loading ...</span>
           : (
-            <>
+            <div data-testid="instagram-content">
               <ErrorBoundary>
                 <Stories stories={stories} />
                 <Feed feed={feed} />
               </ErrorBoundary>
-            </>
+            </div>
           )}
-      </div>
+      </>
     );
   }
 }
-
-// <> = React.Fragment
 
 export default App;
