@@ -1,0 +1,37 @@
+.post__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+.post__form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #858d93;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.post__form input {
+  display: block;
+  margin-bottom: 20px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #858d93;
+  border-radius: 5px;
+  background-color: hsla(0,0%,100%,.02);
+  font-size: 12px;
+  outline: none;
+}
+
+.post__form button {
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(45deg,#d51589,#ff991c);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
