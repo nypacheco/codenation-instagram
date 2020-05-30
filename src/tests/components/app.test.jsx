@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, wait, act } from '@testing-library/react';
 
 import App from '../../components/App';
 
@@ -28,10 +28,14 @@ jest.mock('../../utils/stories', () => ({ getStories: jest.fn(() => [mockStory])
 jest.mock('../../utils/feed', () => ({ getFeed: jest.fn(() => [mockFeed]) }));
 
 describe('App', () => {
-  it('should find loading text when component is rendered', () => {
-    const { getByText } = render(<App />);
+  it('should find loading text when component is rendered', async () => {
+    const { getByText, queryByText } = render(<App />);
 
     expect(getByText(/loading/i)).toBeInTheDocument();
+
+    await wait();
+
+    expect(queryByText(/loading/i)).not.toBeInTheDocument();
   });
 
   it('should find instagram-content when component have stories and feed data', async () => {
