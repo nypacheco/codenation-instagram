@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useReducer, useEffect } from 'react';
 
 import { getStories } from '../../utils/stories';
 import { getFeed } from '../../utils/feed';
@@ -9,51 +9,64 @@ import Header from '../Header';
 import ErrorBoundary from '../ErrorBoundary';
 import Stories from '../Stories';
 import Feed from '../Feed';
-// import { ControlledForm, UncontrolledForm } from '../Form';
 
-class App extends Component {
-  constructor() {
-    super();
+const initialState = {
+  stories: [],
+  feed: [],
+  isLoading: true,
+};
 
-    this.state = {
-      stories: [],
-      feed: [],
-      isLoading: true,
+const reducer = (state, action) => {
+  if (action.type === 'getData') {
+    return {
+      stories: action.payload.stories,
+      feed: action.payload.feed,
+      isLoading: action.payload.isLoading,
     };
   }
+  return initialState;
+};
 
-  componentDidMount() {
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
     Promise.all([getStories(), getFeed()])
       .then((values) => {
-        this.setState({
-          stories: values[0],
-          feed: values[1],
-          isLoading: false,
+        dispatch({
+          type: 'getData',
+          payload: {
+            stories: values[0],
+            feed: values[1],
+            isLoading: false,
+          },
         });
       });
-  }
+  }, []);
 
-  render() {
-    const { stories, feed, isLoading } = this.state;
+  const { isLoading, stories, feed } = state;
 
-    return (
-      <>
-        <Header />
-        {/* <UncontrolledForm />
-        <ControlledForm /> */}
-        { isLoading
-          ? <span>Loading ...</span>
-          : (
-            <div data-testid="instagram-content">
-              <ErrorBoundary>
-                <Stories stories={stories} />
-                <Feed feed={feed} />
-              </ErrorBoundary>
-            </div>
-          )}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Header />
+      {/* <UncontrolledForm />
+            <ControlledForm /> */}
+      { isLoading
+        ? <span>Loading ...</span>
+        : (
+          <div data-testid="instagram-content">
+            <ErrorBoundary>
+              <Stories stories={stories} />
+              <Feed feed={feed} />
+            </ErrorBoundary>
+          </div>
+        )}
+    </>
+
+
+  );
+};
+
 
 export default App;
