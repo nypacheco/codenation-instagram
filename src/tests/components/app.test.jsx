@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { render, wait, act } from '@testing-library/react';
+import { render, wait } from '@testing-library/react';
 
 import App from '../../components/App';
 
