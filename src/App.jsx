@@ -3,7 +3,7 @@ import {
   BrowserRouter, Route, Switch, useParams, Redirect,
 } from 'react-router-dom';
 
-import Home from './components/Home';
+import Home from './containers/Home';
 
 const User = () => {
   const { username } = useParams();
