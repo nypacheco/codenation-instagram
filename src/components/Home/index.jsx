@@ -27,7 +27,7 @@ const reducer = (state, action) => {
   return initialState;
 };
 
-const App = () => {
+const Home = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -68,4 +68,4 @@ const App = () => {
 };
 
 
-export default App;
+export default Home;
