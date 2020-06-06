@@ -27,7 +27,6 @@ const reducer = (state, action) => {
   return initialState;
 };
 
-
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -51,7 +50,7 @@ const App = () => {
     <>
       <Header />
       {/* <UncontrolledForm />
-            <ControlledForm /> */}
+          <ControlledForm /> */}
       { isLoading
         ? <span>Loading ...</span>
         : (
