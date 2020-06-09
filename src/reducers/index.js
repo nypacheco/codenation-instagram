@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
+
 import stories from './stories';
+import feed from './feed';
 
 const rootReducer = combineReducers({
   stories,
+  feed,
 });
 
 export default rootReducer;
@@ -12,5 +15,10 @@ export default rootReducer;
 //     loading: false,
 //     error: null,
 //     stories: [],
+//   }
+//   feed: {
+//     loading: false,
+//     error: null,
+//     feed: [],
 //   }
 // }
