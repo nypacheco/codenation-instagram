@@ -41,8 +41,8 @@ describe('Feed', () => {
     const { getByText, getByAltText } = render(<Feed feed={feed} />);
 
     expect(getByText(post.likes.first.name)).toBeInTheDocument();
-    expect(getByAltText(`${post.slug}-photo`)).toBeInTheDocument();
-    expect(getByAltText(`${post.slug}-photo`).src).toEqual(post.photo);
+    expect(getByAltText(`${post.slug}-figure`)).toBeInTheDocument();
+    expect(getByAltText(`${post.slug}-figure`).src).toEqual(post.photo);
   });
 
   it('should render the amount of likes correctly', () => {
