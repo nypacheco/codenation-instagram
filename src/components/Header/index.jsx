@@ -9,9 +9,9 @@ import logo from '../../assets/images/instagram-logo.svg';
 const Header = () => (
   <header className="topbar">
     <div className="container">
-      <a href="#" className="topbar__logo">
+      <div className="topbar__logo">
         <img src={logo} alt="Instagram logo" />
-      </a>
+      </div>
 
       <button type="button" className="topbar__icon">
         <FontAwesomeIcon icon={faPaperPlane} />

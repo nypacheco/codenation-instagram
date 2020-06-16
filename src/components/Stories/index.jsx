@@ -14,9 +14,8 @@ class Stories extends Component {
         <section className="stories">
           <div className="stories__container">
             {stories.map((story) => (
-              <a
+              <div
                 key={story.id}
-                href="#"
                 className={classnames(
                   'user__thumb', {
                     'user__thumb--hasNew': story.hasNew,
@@ -27,7 +26,7 @@ class Stories extends Component {
                 <span className="user__thumb__wrapper" data-testid="user-thumb">
                   <img src={story.image} alt={story.alt} />
                 </span>
-              </a>
+              </div>
             ))}
           </div>
         </section>

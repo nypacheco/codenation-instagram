@@ -15,11 +15,11 @@ const Feed = ({ feed }) => (
         <article key={post.id} className="post" data-testid="post">
           <header className="post__header">
             <div className="user">
-              <a href="#" className="user__thumb">
+              <div className="user__thumb">
                 <img src={post.profile} alt={`${post.slug}-profile`} />
-              </a>
+              </div>
 
-              <a href="#" className="user__name">{post.name}</a>
+              <div className="user__name">{post.name}</div>
             </div>
 
             <button type="button" className="post__context">
@@ -28,7 +28,7 @@ const Feed = ({ feed }) => (
           </header>
 
           <figure className="post__figure">
-            <img src={post.photo} alt={`${post.slug}-photo`} />
+            <img src={post.photo} alt={`${post.slug}-figure`} />
           </figure>
 
           <nav className="post__controls">
@@ -43,12 +43,12 @@ const Feed = ({ feed }) => (
 
           <div className="post__status">
             <div className="user">
-              <a href="#" className="user__thumb">
+              <div className="user__thumb">
                 <img src={post.likes.first.profile} alt={`${post.likes.first.slug}-profile`} />
-              </a>
+              </div>
 
               <span>
-                curtido por <a href="#">{post.likes.first.name}</a> e outras <a href="#">{post.likes.others} pessoas</a>
+                curtido por <div>{post.likes.first.name}</div> e outras <div>{post.likes.others} pessoas</div>
               </span>
             </div>
           </div>
