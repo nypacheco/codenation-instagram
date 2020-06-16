@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -17,13 +17,13 @@ const Home = () => {
   const { loading: loadingFeed, feed } = useSelector((state) => state.feed);
 
   const dispatch = useDispatch();
-  const getStoriesAction = bindActionCreators(getStories, dispatch);
-  const getFeedAction = bindActionCreators(getFeed, dispatch);
+  const getStoriesAction = useMemo(() => bindActionCreators(getStories, dispatch), [dispatch]);
+  const getFeedAction = useMemo(() => bindActionCreators(getFeed, dispatch), [dispatch]);
 
   useEffect(() => {
     getStoriesAction();
     getFeedAction();
-  }, []);
+  }, [getStoriesAction, getFeedAction]);
 
   const loading = loadingStories && loadingFeed;
 
@@ -43,6 +43,5 @@ const Home = () => {
     </>
   );
 };
-
 
 export default Home;
