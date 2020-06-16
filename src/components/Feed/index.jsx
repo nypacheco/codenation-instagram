@@ -48,7 +48,7 @@ const Feed = ({ feed }) => (
               </div>
 
               <span>
-                curtido por <div>{post.likes.first.name}</div> e outras <div>{post.likes.others} pessoas</div>
+                curtido por <b>{post.likes.first.name}</b> e outras <b>{post.likes.others} pessoas</b>
               </span>
             </div>
           </div>
