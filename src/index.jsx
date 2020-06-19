@@ -5,12 +5,12 @@ import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import * as serviceWorker from './serviceWorker';
-
 import App from './App';
 
 import rootReducer from './reducers';
 import rootSaga from './sagas';
+
+import * as serviceWorker from './serviceWorker';
 
 const sagaMiddleware = createSagaMiddleware();
 
