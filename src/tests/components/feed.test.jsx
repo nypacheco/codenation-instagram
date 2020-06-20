@@ -42,7 +42,7 @@ describe('Feed', () => {
 
     expect(getByText(post.likes.first.name)).toBeInTheDocument();
     expect(getByAltText(`${post.slug}-figure`)).toBeInTheDocument();
-    expect(getByAltText(`${post.slug}-figure`).src).toEqual(post.photo);
+    expect(getByAltText(`${post.slug}`).src).toEqual(post.photo);
   });
 
   it('should render the amount of likes correctly', () => {
