@@ -10,7 +10,7 @@ const User = () => {
 
   return username === 'batman'
     ? <Redirect to="/" />
-    : <h1>usuario especifico: {username}</h1>;
+    : <h1>usuario específico: {username}</h1>;
 };
 
 const App = () => (
