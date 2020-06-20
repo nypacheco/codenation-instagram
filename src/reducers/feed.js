@@ -22,7 +22,7 @@ const feedReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: null,
-        feed: [...state.feed, ...action.payload],
+        feed: [...action.payload],
       };
     case GET_FEED_FAILURE:
       return {

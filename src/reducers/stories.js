@@ -22,7 +22,7 @@ const storiesReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: null,
-        stories: [...state.stories, ...action.payload],
+        stories: [...action.payload],
       };
     case GET_STORIES_FAILURE:
       return {
