@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "pre-build": "yarn test",
+    "prebuild": "yarn test",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
